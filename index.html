@@ -18,6 +18,7 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <!-- NAVBAR -->
@@ -35,10 +36,10 @@
           <li class="nav-item"><a class="nav-link text-white-50" href="#sobre">Sobre</a></li>
           <li class="nav-item"><a class="nav-link text-white-50" href="#nacionais">Bolsas Nacionais</a></li>
           <li class="nav-item"><a class="nav-link text-white-50" href="#internacionais">Bolsas Internacionais</a></li>
-          <li class="nav-item"><a class="nav-link text-white-50" href="#eligibilidade">Elegibilidade</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="#inscricao">Inscrição</a></li>
         </ul>
         <div class="ms-lg-3">
-          <button class="btn btn-cta rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#applyModal">CANDIDATAR-ME AGORA</button>
+          <button class="btn btn-cta rounded-pill px-4" onclick="scrollToInscricao()">CANDIDATAR-ME AGORA</button>
         </div>
       </div>
     </div>
@@ -49,15 +50,15 @@
     <div class="container py-5">
       <div class="row align-items-center g-4">
         <div class="col-lg-7">
-          <span class="badge badge-soft rounded-pill mb-3">Bolsa de estudos 100% gratuita</span>
-          <h1 class="display-4 fw-bold">Transforme seu Futuro com a <span style="color:var(--brand)">Bolsa de Estudos Emanuel Xirimbimbi</span></h1>
+          <span class="badge badge-soft rounded-pill mb-3">Bolsas 100% pagas e comparticipadas até 85%</span>
+          <h1 class="display-4 fw-bold">Transforme seu Futuro com a <span style="color:var(--brand)">Bolsa Emanuel Xirimbimbi</span></h1>
           <p class="lead text-white-50 mt-3">"Educação é o combustível do sucesso" — Uma oportunidade única para jovens angolanos alcançarem seus sonhos académicos.</p>
           <div class="d-flex flex-wrap gap-3 mt-4">
-            <button class="btn btn-brand btn-lg rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#applyModal"><i class="bi bi-rocket-takeoff me-2"></i>Candidatar-me Agora</button>
+            <button class="btn btn-brand btn-lg rounded-pill px-4" onclick="scrollToInscricao()"><i class="bi bi-rocket-takeoff me-2"></i>Candidatar-me Agora</button>
             <a href="#nacionais" class="btn btn-outline-brand btn-lg rounded-pill px-4"><i class="bi bi-info-circle me-2"></i>Ver Bolsas</a>
           </div>
           <div class="d-flex gap-4 mt-4 text-white-50">
-            <div><span class="h3 mb-0 text-white">100%</span><div>Bolsas Gratuitas</div></div>
+            <div><span class="h3 mb-0 text-white">100%</span><div>pagas e comparticipadas até 85%</div></div>
             <div><span class="h3 mb-0 text-white">∞</span><div>Oportunidades</div></div>
           </div>
           <!-- Universidades Internacionais -->
@@ -90,7 +91,7 @@
               <li class="mb-2"><i class="bi bi-mortarboard me-2"></i>PhD, Hipnoterapeuta, Arquiteto, Mentor, Urbanista e Estrategista</li>
               <li class="mb-2"><i class="bi bi-geo-alt me-2"></i>Doutorado em Design Urbano — Beijing Forestry University (China)</li>
               <li class="mb-2"><i class="bi bi-award me-2"></i>Membro da Ordem dos Arquitetos de Angola (AO-0601)</li>
-              <li class=""><i class="bi bi-heart-pulse me-2"></i>Defensor da educação como ferramenta de transformação social</li>
+              <li><i class="bi bi-heart-pulse me-2"></i>Defensor da educação como ferramenta de transformação social</li>
             </ul>
             <div class="d-flex gap-3 mt-3">
               <a class="btn btn-sm btn-outline-brand rounded-pill" href="https://www.instagram.com/emanuelxirimbimbi_oficial/" target="_blank" rel="noopener">Instagram <i class="bi bi-instagram ms-1"></i></a>
@@ -129,7 +130,7 @@
                     <div class="icon-box"><i class="bi bi-wallet2"></i></div>
                     <div>
                       <div class="fw-bold">Por que candidatar-se?</div>
-                      <div class="small text-white-50">Cobertura total das propinas universitárias até 60 mil kz<br>cursos técnicos-proficionais até 500.000kz</div>
+                      <div class="small text-white-50">Cobertura total das propinas universitárias até 60 mil kz<br>cursos técnicos-profissionais até 500.000 kz</div>
                     </div>
                   </div>
                   <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background: rgba(122,166,255,0.1);">
@@ -141,6 +142,200 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSCRIÇÃO -->
+  <section class="py-5" id="inscricao">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-8">
+          <h2 class="section-title">Inscrição</h2>
+          <p class="section-sub">Escolha o tipo de bolsa e candidate-se para transformar seu futuro.</p>
+        </div>
+      </div>
+      <div class="row g-4" id="scholarship-options">
+        <div class="col-lg-6">
+          <div class="card card-dark p-4 rounded-4 h-100">
+            <h5 class="mb-3">Bolsas Nacionais</h5>
+            <p class="text-white-50 small mb-3">Estude nas melhores universidades de Angola com propinas 100% cobertas após aprovação.</p>
+            <ul class="text-white-50 small mb-3">
+              <li>Taxa de inscrição: 7.500 Kz</li>
+              <li>Universidades: Gregório Semedo, Belas, Ndunduma, e mais</li>
+              <li>Cursos: Direito, Engenharia, Psicologia, e outros</li>
+            </ul>
+            <button class="btn btn-brand rounded-pill px-4" onclick="showForm('national')">Candidatar-me<i class="bi bi-arrow-right ms-2"></i></button>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card card-dark p-4 rounded-4 h-100">
+            <h5 class="mb-3">Bolsas Internacionais</h5>
+            <p class="text-white-50 small mb-3">Oportunidades em universidades renomadas na Argentina, Uruguai, Espanha, Brasil e Portugal.</p>
+            <ul class="text-white-50 small mb-3">
+              <li>Taxa de inscrição: 10.000 Kz (Standard) ou 20.000 Kz (Premium, Brasil)</li>
+              <li>Universidades: UBA, USP, Unicamp, Girona, e mais</li>
+              <li>Cursos: Medicina, Arquitetura, Advocacia, e outros</li>
+            </ul>
+            <button class="btn btn-brand rounded-pill px-4" onclick="showForm('international')">Candidatar-me<i class="bi bi-arrow-right ms-2"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-12 hidden" id="application-form">
+          <div class="card card-dark p-4 rounded-4">
+            <h5 id="form-title" class="mb-3">Candidatura — Bolsa Nacional</h5>
+            <form class="row g-3 needs-validation" novalidate id="applicationForm">
+              <input type="hidden" id="bolsa-type" value="">
+              <div class="col-12">
+                <label for="nome" class="form-label">Nome Completo *</label>
+                <input id="nome" class="form-control" required placeholder="Digite seu nome completo" />
+                <div class="invalid-feedback">Informe seu nome.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="idade" class="form-label">Idade *</label>
+                <input id="idade" type="number" class="form-control" placeholder="Sua idade" min="16" max="35" required />
+                <div class="invalid-feedback">Informe sua idade (16-35 anos).</div>
+              </div>
+              <div class="col-md-6">
+                <label for="bi" class="form-label">Bilhete de Identidade *</label>
+                <input id="bi" class="form-control" placeholder="123456789LA123" pattern="[0-9]{9}[A-Z]{2}[0-9]{3}" required />
+                <div class="invalid-feedback">Informe um BI válido (ex.: 123456789LA123).</div>
+              </div>
+              <div class="col-md-6">
+                <label for="tel" class="form-label">Telefone *</label>
+                <input id="tel" type="tel" class="form-control" placeholder="923440172" pattern="[9][0-9]{8}" required />
+                <div class="invalid-feedback">Informe um telefone válido (ex.: 923440172).</div>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">E-mail *</label>
+                <input id="email" type="email" class="form-control" placeholder="exemplo@email.com" required />
+                <div class="invalid-feedback">Informe um e-mail válido.</div>
+              </div>
+              <div class="col-12 hidden" id="pais-container">
+                <label for="pais" class="form-label">País *</label>
+                <select class="form-select" id="pais">
+                  <option value="">Selecione o país...</option>
+                  <option value="Argentina">Argentina</option>
+                  <option value="Uruguai">Uruguai</option>
+                  <option value="Espanha">Espanha</option>
+                  <option value="Brasil">Brasil</option>
+                  <option value="Portugal">Portugal</option>
+                </select>
+                <div class="invalid-feedback">Selecione o país.</div>
+              </div>
+              <div class="col-12 hidden" id="tipo-brasil-container">
+                <label for="tipo-brasil" class="form-label">Tipo de Bolsa no Brasil *</label>
+                <select class="form-select" id="tipo-brasil">
+                  <option value="">Selecione...</option>
+                  <option value="standard">Standard</option>
+                  <option value="premium">Premium (85% + Garantia de Emprego em 90 dias, em São Paulo)</option>
+                </select>
+                <div class="invalid-feedback">Selecione o tipo de bolsa.</div>
+              </div>
+              <div class="col-12" id="universidade-container">
+                <label for="universidade" class="form-label">Universidade *</label>
+                <select class="form-select" id="universidade" required>
+                  <option value="">Selecione a universidade...</option>
+                </select>
+                <div class="invalid-feedback">Selecione uma universidade.</div>
+              </div>
+              <div class="col-12 hidden" id="custom-uni-container">
+                <label for="custom-uni" class="form-label">Nome da Universidade *</label>
+                <input id="custom-uni" class="form-control" placeholder="Digite o nome da universidade" />
+                <div class="invalid-feedback">Informe o nome da universidade.</div>
+              </div>
+              <div class="col-12" id="curso-container">
+                <label for="curso" class="form-label">Curso *</label>
+                <select class="form-select" id="curso" required>
+                  <option value="">Selecione o curso...</option>
+                </select>
+                <div class="invalid-feedback">Selecione um curso.</div>
+              </div>
+              <div class="col-12 hidden" id="custom-curso-container">
+                <label for="custom-curso" class="form-label">Nome do Curso *</label>
+                <input id="custom-curso" class="form-control" placeholder="Digite o nome do curso" />
+                <div class="invalid-feedback">Informe o nome do curso.</div>
+              </div>
+              <div class="col-12">
+                <label for="certificado" class="form-label">Certificado/Declaração de Notas *</label>
+                <input type="file" class="form-control" id="certificado" accept=".pdf" required>
+                <div class="invalid-feedback">Envie seu certificado ou declaração de notas em formato PDF.</div>
+              </div>
+              <div class="col-12 hidden" id="international-note">
+                <p class="text-white-50 small">OBS: Ainda não cobre o bilhete de passagem, cobre apenas a situação académica.</p>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="termos" required>
+                  <label class="form-check-label small" for="termos">
+                    Concordo com os termos e condições e confirmo que minhas informações estão corretas. O pagamento desta taxa não significa a concessão total da bolsa, significa o pagamento da taxa de inscrição para o fundo de bolsa.
+                  </label>
+                  <div class="invalid-feedback">Você deve concordar para continuar.</div>
+                </div>
+              </div>
+              <div class="col-12 d-flex justify-content-between mt-2">
+                <button type="button" class="btn btn-outline-brand rounded-pill px-4" onclick="hideForm()">Cancelar</button>
+                <button type="submit" class="btn btn-brand rounded-pill px-4">Próximo<i class="bi bi-arrow-right ms-2"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Payment Section -->
+        <div class="col-12 hidden" id="payment-section">
+          <div class="card card-dark p-4 rounded-4">
+            <h5 class="mb-3">Pagamento da Taxa de Inscrição</h5>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="mbway" checked>
+                  <label class="form-check-label d-flex align-items-center" for="mbway">
+                    <i class="bi bi-phone-fill me-2 fs-4"></i> PayPay
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="multicaixa">
+                  <label class="form-check-label d-flex align-items-center" for="multicaixa">
+                    <i class="bi bi-credit-card-fill me-2 fs-4"></i> Multicaixa Express
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="transferencia">
+                  <label class="form-check-label d-flex align-items-center" for="transferencia">
+                    <i class="bi bi-bank me-2 fs-4"></i> Transferência Bancária
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 p-3 rounded-3" style="background: rgba(255,255,255,0.05);">
+              <h6 class="mb-2">Resumo do Pagamento</h6>
+              <div class="d-flex justify-content-between">
+                <span>Tipo de Bolsa:</span>
+                <span id="payment-type">-</span>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span>Universidade:</span>
+                <span id="payment-university">-</span>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span>Curso:</span>
+                <span id="payment-course">-</span>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span>Valor:</span>
+                <span class="fw-bold text-brand" id="payment-amount">-</span>
+              </div>
+            </div>
+            <div class="mt-4 d-flex justify-content-between">
+              <button type="button" class="btn btn-outline-brand rounded-pill px-4" onclick="backToForm()">Voltar</button>
+              <button type="button" class="btn btn-brand rounded-pill px-4" id="confirm-payment">Confirmar Pagamento</button>
             </div>
           </div>
         </div>
@@ -207,11 +402,10 @@
       <div class="row mb-4">
         <div class="col-lg-8">
           <h2 class="section-title">Bolsas Internacionais</h2>
-          <p class="section-sub">Oportunidades de estudo em universidades renomadas na Argentina, Uruguai, Espanha e Brasil. <!--<span class="text-warning">Taxa de inscrição: 10.000 Kz</span>--></p>
+          <p class="section-sub">Oportunidades de estudo em universidades renomadas na Argentina, Uruguai, Espanha, Brasil e Portugal.</p>
         </div>
       </div>
       <div class="row g-4">
-        <!-- Argentina -->
         <div class="col-md-6 col-lg-3">
           <div class="card card-dark p-4 rounded-4 university-card">
             <h5 class="mb-3">Argentina</h5>
@@ -230,10 +424,8 @@
               <li>Bioquímica</li>
               <li>Comunicação Social</li>
             </ul>
-            
           </div>
         </div>
-        <!-- Uruguai -->
         <div class="col-md-6 col-lg-3">
           <div class="card card-dark p-4 rounded-4 university-card">
             <h5 class="mb-3">Uruguai</h5>
@@ -251,7 +443,6 @@
             </ul>
           </div>
         </div>
-        <!-- Espanha -->
         <div class="col-md-6 col-lg-3">
           <div class="card card-dark p-4 rounded-4 university-card">
             <h5 class="mb-3">Espanha</h5>
@@ -269,7 +460,6 @@
             </ul>
           </div>
         </div>
-        <!-- Brasil -->
         <div class="col-md-6 col-lg-3">
           <div class="card card-dark p-4 rounded-4 university-card">
             <h5 class="mb-3">Brasil</h5>
@@ -289,56 +479,6 @@
               <li>Administração</li>
               <li>Arquitetura e Urbanismo</li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CRITÉRIOS DE ELEGIBILIDADE -->
-  <section class="py-5" id="eligibilidade">
-    <div class="container">
-      <div class="row mb-4">
-        <div class="col-lg-8">
-          <h2 class="section-title">Critérios de Elegibilidade</h2>
-          <p class="section-sub">Verifique se você atende aos requisitos para concorrer à bolsa de estudos.</p>
-        </div>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card card-dark p-4 rounded-4 h-100">
-            <div class="d-flex align-items-start gap-3">
-              <div class="icon-box"><i class="bi bi-mortarboard"></i></div>
-              <div>
-                <h6>Recém-Formados do Ensino Médio</h6>
-                <p class="text-white-50 small mb-1">Média ≥ 16 valores • Certificado de conclusão</p>
-                <p class="text-white-50 small mb-0">Para quem terminou o ensino médio e quer ingressar na universidade.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card card-dark p-4 rounded-4 h-100">
-            <div class="d-flex align-items-start gap-3">
-              <div class="icon-box"><i class="bi bi-journal-check"></i></div>
-              <div>
-                <h6>Universitários em Curso</h6>
-                <p class="text-white-50 small mb-1">Média ≥ 16 valores • Declaração de Notas</p>
-                <p class="text-white-50 small mb-0">Para estudantes já matriculados no ensino superior.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card card-dark p-4 rounded-4 h-100">
-            <div class="d-flex align-items-start gap-3">
-              <div class="icon-box"><i class="bi bi-tools"></i></div>
-              <div>
-                <h6>Cursos Técnico/Profissional</h6>
-                <p class="text-white-50 small mb-1">Média ≥ 16 valores • Comprovativo de inscrição</p>
-                <p class="text-white-50 small mb-0">Para cursos técnicos e profissionais até 500.000 Kz.</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -365,9 +505,6 @@
               </div>
             </div>
             <p class="text-white-50 small"><i class="bi bi-quote quote-icon me-2"></i>A bolsa mudou minha vida! Hoje estudo na UBA e estou construindo meu futuro como psicóloga.</p>
-            <!--<div class="mt-auto">
-              <button class="btn btn-brand rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#applyModal">Quero Minha Bolsa</button>
-            </div>--->
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -380,9 +517,6 @@
               </div>
             </div>
             <p class="text-white-50 small"><i class="bi bi-quote quote-icon me-2"></i>Com a bolsa, consegui estudar na Unicamp. A oportunidade abriu portas que nunca imaginei!</p>
-            <!--<div class="mt-auto">
-              <button class="btn btn-brand rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#applyModal">Quero Minha Bolsa</button>
-            </div>-->
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -395,9 +529,6 @@
               </div>
             </div>
             <p class="text-white-50 small"><i class="bi bi-quote quote-icon me-2"></i>A bolsa me deu a chance de estudar Direito em Angola e realizar meu sonho de ser advogada.</p>
-            <!--<div class="mt-auto">
-              <button class="btn btn-brand rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#applyModal">Quero Minha Bolsa</button>
-            </div>--->
           </div>
         </div>
       </div>
@@ -417,196 +548,6 @@
     </div>
   </footer>
 
-  <!-- Floating CTA -->
-  <div class="floating-cta">
-    <button class="btn btn-brand rounded-pill shadow px-4" data-bs-toggle="modal" data-bs-target="#applyModal"><i class="bi bi-pen me-2"></i>Candidatar</button>
-  </div>
-
-  <!-- Apply Modal (full-screen) -->
-  <div class="modal fade" id="applyModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content" style="background: rgba(10, 15, 36, 0.98); color: var(--text);">
-        <div class="modal-header border-0">
-          <h5 class="modal-title">Candidatura — Bolsa de Estudos</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container">
-            <div class="row g-4">
-              <div class="col-lg-4">
-                <div class="card card-dark p-4 rounded-4">
-                  <h6 class="mb-2">Progresso</h6>
-                  <div class="stepper mb-3">
-                    <div class="step active">1</div><div class="bar"></div>
-                    <div class="step">2</div><div class="bar"></div>
-                    <div class="step">3</div>
-                  </div>
-                  <ul class="small text-white-50 list-unstyled mb-0">
-                    <li>1. Dados Pessoais</li>
-                    <li>2. Taxa de Inscrição</li>
-                    <li>3. Confirmação</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-8">
-                <div class="card card-dark p-4 rounded-4">
-                  <h5 class="mb-1">Passo 1 de 3 — Dados Pessoais</h5>
-                  <p class="text-white-50 small mb-3">Preencha seus dados e selecione a universidade e curso desejados.</p>
-                  <form class="row g-3 needs-validation" novalidate id="modalForm">
-                    <div class="col-12">
-                      <label for="m-nome" class="form-label">Nome Completo *</label>
-                      <input id="m-nome" class="form-control" required placeholder="Digite seu nome completo" />
-                      <div class="invalid-feedback">Informe seu nome.</div>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="m-idade" class="form-label">Idade *</label>
-                      <input id="m-idade" type="number" class="form-control" placeholder="Sua idade" min="16" max="35" required />
-                      <div class="invalid-feedback">Informe sua idade (16-35 anos).</div>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="m-bi" class="form-label">Bilhete de Identidade *</label>
-                      <input id="m-bi" class="form-control" placeholder="123456789LA123" pattern="[0-9]{9}[A-Z]{2}[0-9]{3}" required />
-                      <div class="invalid-feedback">Informe um BI válido (ex.: 123456789LA123).</div>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="m-tel" class="form-label">Telefone *</label>
-                      <input id="m-tel" type="tel" class="form-control" placeholder="+244 9xx xxx xxx" pattern="\+244[0-9]{9}" required />
-                      <div class="invalid-feedback">Informe um telefone válido (ex.: +244 923 440 172).</div>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="m-email" class="form-label">E-mail *</label>
-                      <input id="m-email" type="email" class="form-control" placeholder="exemplo@email.com" required />
-                      <div class="invalid-feedback">Informe um e-mail válido.</div>
-                    </div>
-                    <div class="col-12">
-                      <label for="m-tipo-bolsa" class="form-label">Tipo de Bolsa *</label>
-                      <select class="form-select" id="m-tipo-bolsa" required>
-                        <option value="">Selecione...</option>
-                        <option value="nacional">Bolsa Nacional</option>
-                        <option value="internacional">Bolsa Internacional</option>
-                      </select>
-                      <div class="invalid-feedback">Selecione o tipo de bolsa.</div>
-                    </div>
-                    <div class="col-12 hidden" id="m-universidade-container">
-                      <label for="m-universidade" class="form-label">Universidade *</label>
-                      <select class="form-select" id="m-universidade" required>
-                        <option value="">Selecione a universidade...</option>
-                      </select>
-                      <div class="invalid-feedback">Selecione uma universidade.</div>
-                    </div>
-                    <div class="col-12 hidden" id="m-curso-container">
-                      <label for="m-curso" class="form-label">Curso *</label>
-                      <select class="form-select" id="m-curso" required>
-                        <option value="">Selecione o curso...</option>
-                      </select>
-                      <div class="invalid-feedback">Selecione um curso.</div>
-                    </div>
-                    <div class="col-12">
-                      <label for="m-certificado" class="form-label">Certificado/Declaração de Notas *</label>
-                      <input type="file" class="form-control" id="m-certificado" accept=".pdf,.jpg,.jpeg,.png" required>
-                      <div class="invalid-feedback">Envie seu certificado ou declaração de notas.</div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="m-termos" required>
-                        <label class="form-check-label small" for="m-termos">
-                          Concordo com os termos e condições e confirmo que minhas informações estão corretas.
-                        </label>
-                        <div class="invalid-feedback">Você deve concordar para continuar.</div>
-                      </div>
-                    </div>
-                    <div class="col-12 d-flex justify-content-between mt-2">
-                      <button type="button" class="btn btn-outline-brand rounded-pill px-4" data-bs-dismiss="modal">Cancelar</button>
-                      <button type="submit" class="btn btn-brand rounded-pill px-4">Próximo<i class="bi bi-arrow-right ms-2"></i></button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer border-0 justify-content-between">
-          <div class="small text-white-50">© 2025 Bolsa de Estudos Emanuel Xirimbimbi.</div>
-          <button type="button" class="btn btn-outline-brand rounded-pill px-4" data-bs-dismiss="modal">Fechar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Payment Modal -->
-  <div class="modal fade" id="paymentModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content" style="background: rgba(10, 15, 36, 0.98); color: var(--text);">
-        <div class="modal-header border-0">
-          <h5 class="modal-title">Pagamento da Taxa de Inscrição</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container">
-            <div class="row g-4">
-              <div class="col-12">
-                <div class="card card-dark p-4 rounded-4">
-                  <h5 class="mb-3">Métodos de Pagamento</h5>
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="paymentMethod" id="mbway" checked>
-                        <label class="form-check-label d-flex align-items-center" for="mbway">
-                          <i class="bi bi-phone-fill me-2 fs-4"></i> PayPay
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="paymentMethod" id="multicaixa">
-                        <label class="form-check-label d-flex align-items-center" for="multicaixa">
-                          <i class="bi bi-credit-card-fill me-2 fs-4"></i> Multicaixa Express
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="paymentMethod" id="transferencia">
-                        <label class="form-check-label d-flex align-items-center" for="transferencia">
-                          <i class="bi bi-bank me-2 fs-4"></i> Transferência Bancária
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mt-4 p-3 rounded-3" style="background: rgba(255,255,255,0.05);">
-                    <h6 class="mb-2">Resumo do Pagamento</h6>
-                    <div class="d-flex justify-content-between">
-                      <span>Tipo de Bolsa:</span>
-                      <span id="payment-type">Nacional (7.500 Kz)</span>
-                    </div>
-                    <div class="d-flex justify-content-between mt-2">
-                      <span>Universidade:</span>
-                      <span id="payment-university">-</span>
-                    </div>
-                    <div class="d-flex justify-content-between mt-2">
-                      <span>Curso:</span>
-                      <span id="payment-course">-</span>
-                    </div>
-                    <div class="d-flex justify-content-between mt-2">
-                      <span>Valor:</span>
-                      <span class="fw-bold text-brand" id="payment-amount">7.500 Kz</span>
-                    </div>
-                  </div>
-                  <div class="mt-4">
-                    <button type="button" class="btn btn-brand w-100 rounded-pill py-2" id="confirm-payment">
-                      Confirmar Pagamento
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
 </body>
 </html>
